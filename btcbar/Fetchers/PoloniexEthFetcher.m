@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 nearengine. All rights reserved.
 //
 
-#import "YunbiEthFetcher.h"
+#import "PoloniexEthFetcher.h"
 
-@implementation YunbiEthFetcher
+@implementation PoloniexEthFetcher
 
 - (id)init
 {
     if (self = [super init])
     {
         // Menu Item Name
-        self.ticker_menu = @"云币 ETH";
+        self.ticker_menu = @"Poloniex ETH";
         
         // Website location
         self.url = @"https://yunbi.com/markets/ethcny";
@@ -40,10 +40,10 @@
 // Initiates an asyncronous HTTP connection
 - (void)requestUpdate
 {
-   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://yunbi.com//api/v2/tickers/ethcny.json"]];
+   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://poloniex.com/public?command=returnTicker"]];
     
     // Set the request's user agent
-    [request addValue:@"btcbar/2.0 (YunbiEthFetcher)" forHTTPHeaderField:@"User-Agent"];
+    [request addValue:@"btcbar/2.0 (PoloniexEthFetcher)" forHTTPHeaderField:@"User-Agent"];
     
     // Initialize a connection from our request
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -82,7 +82,7 @@
     if(results)
     {
         // Get API status
-        NSDictionary *ticker = [results objectForKey:@"ticker"];
+        NSDictionary *ticker = [results objectForKey:@"USDT_ETH"];
         NSString *resultsStatus = [ticker objectForKey:@"last"];
         
         
@@ -91,7 +91,7 @@
         if(resultsStatus)
         {
             NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
-            currencyStyle.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh-CN"];
+            currencyStyle.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
             currencyStyle.numberStyle = NSNumberFormatterCurrencyStyle;
             
             self.error = nil;

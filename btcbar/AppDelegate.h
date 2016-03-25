@@ -6,7 +6,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "YunbiEthFetcher.h"
-
+#import "PoloniexEthFetcher.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSMenu *btcbarMainMenu;

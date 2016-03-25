@@ -17,6 +17,7 @@
 		E79030471C983D5A00758435 /* ethlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E79030451C983D5A00758435 /* ethlogo@2x.png */; };
 		E79030491C983E6A00758435 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79030481C983E6A00758435 /* Images.xcassets */; };
 		E790304C1C98450900758435 /* YunbiEthFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E790304B1C98450900758435 /* YunbiEthFetcher.m */; };
+		E79BE7BC1CA591850021DA4E /* PoloniexEthFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E79BE7BB1CA591850021DA4E /* PoloniexEthFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		E79030481C983E6A00758435 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ethbar/Images.xcassets; sourceTree = "<group>"; };
 		E790304A1C98450900758435 /* YunbiEthFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YunbiEthFetcher.h; path = Fetchers/YunbiEthFetcher.h; sourceTree = "<group>"; };
 		E790304B1C98450900758435 /* YunbiEthFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YunbiEthFetcher.m; path = Fetchers/YunbiEthFetcher.m; sourceTree = "<group>"; };
+		E79BE7BA1CA591850021DA4E /* PoloniexEthFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoloniexEthFetcher.h; path = Fetchers/PoloniexEthFetcher.h; sourceTree = "<group>"; };
+		E79BE7BB1CA591850021DA4E /* PoloniexEthFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoloniexEthFetcher.m; path = Fetchers/PoloniexEthFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				E790304A1C98450900758435 /* YunbiEthFetcher.h */,
+				E79BE7BA1CA591850021DA4E /* PoloniexEthFetcher.h */,
+				E79BE7BB1CA591850021DA4E /* PoloniexEthFetcher.m */,
 				E790304B1C98450900758435 /* YunbiEthFetcher.m */,
 			);
 			name = Fetchers;
@@ -214,6 +219,7 @@
 				830CE09D171B6C3E00DDD525 /* main.m in Sources */,
 				E790304C1C98450900758435 /* YunbiEthFetcher.m in Sources */,
 				830CE0A4171B6C3E00DDD525 /* AppDelegate.m in Sources */,
+				E79BE7BC1CA591850021DA4E /* PoloniexEthFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
