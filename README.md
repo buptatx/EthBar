@@ -1,12 +1,12 @@
 
 ![cover-image](https://raw.github.com/cnkevinlee/ethbar/master/Resources/github_cover.png)
 
-EthBar is a status bar widget for OS X that displays the latest price of Ethercoin(ETH) from API of yunbi.com. 
+EthBar is a status bar widget for OS X that displays the latest price of Ethercoin(ETH) from API of Yunbi(￥) and Poloneix($).
 Based on the great app btcbar https://github.com/nearengine/btcbar
 
 ## Download
 
-Click here: https://github.com/cnkevinlee/EthBar/releases/download/v1.0.0/EthBar.zip
+Click here: https://github.com/cnkevinlee/EthBar/releases/download/v1.1/EthBar.zip
 
 It requires OS X 10.7+ and a 64-bit processor.
 
@@ -22,7 +22,11 @@ Blog in Chinese: http://likaiwen.cn/
 
 ## Changelog
 
-### 1.0.0
+### 1.1
+
+* Add the Poloniex ETH price in USD.
+
+### 1.0
 
 * The first release, only use Yunbi.com's ticker API.
 
