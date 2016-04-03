@@ -6,7 +6,7 @@ Based on the great app btcbar https://github.com/nearengine/btcbar
 
 ## Download
 
-Click here: https://github.com/cnkevinlee/EthBar/releases/download/v1.1/EthBar.zip
+Click here: https://github.com/cnkevinlee/EthBar/releases/download/v1.2/EthBar.zip
 
 It requires OS X 10.7+ and a 64-bit processor.
 
@@ -21,6 +21,10 @@ Dribbble link: https://dribbble.com/kevinli
 Blog in Chinese: http://likaiwen.cn/
 
 ## Changelog
+
+### 1.2
+
+* Add the Fabric Answers analysis function.
 
 ### 1.1
 
