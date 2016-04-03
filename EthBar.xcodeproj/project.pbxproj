@@ -18,6 +18,8 @@
 		E79030491C983E6A00758435 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79030481C983E6A00758435 /* Images.xcassets */; };
 		E790304C1C98450900758435 /* YunbiEthFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E790304B1C98450900758435 /* YunbiEthFetcher.m */; };
 		E79BE7BC1CA591850021DA4E /* PoloniexEthFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E79BE7BB1CA591850021DA4E /* PoloniexEthFetcher.m */; };
+		E79BE7C31CB173EC0021DA4E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79BE7C11CB173EC0021DA4E /* Fabric.framework */; };
+		E79BE7C41CB173EC0021DA4E /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79BE7C21CB173EC0021DA4E /* Answers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		E790304B1C98450900758435 /* YunbiEthFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YunbiEthFetcher.m; path = Fetchers/YunbiEthFetcher.m; sourceTree = "<group>"; };
 		E79BE7BA1CA591850021DA4E /* PoloniexEthFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoloniexEthFetcher.h; path = Fetchers/PoloniexEthFetcher.h; sourceTree = "<group>"; };
 		E79BE7BB1CA591850021DA4E /* PoloniexEthFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoloniexEthFetcher.m; path = Fetchers/PoloniexEthFetcher.m; sourceTree = "<group>"; };
+		E79BE7C11CB173EC0021DA4E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E79BE7C21CB173EC0021DA4E /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Answers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79BE7C41CB173EC0021DA4E /* Answers.framework in Frameworks */,
 				830CE091171B6C3E00DDD525 /* Cocoa.framework in Frameworks */,
+				E79BE7C31CB173EC0021DA4E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				E79030481C983E6A00758435 /* Images.xcassets */,
+				E79BE7C11CB173EC0021DA4E /* Fabric.framework */,
+				E79BE7C21CB173EC0021DA4E /* Answers.framework */,
 				830CE096171B6C3E00DDD525 /* btcbar */,
 				830CE08F171B6C3E00DDD525 /* Frameworks */,
 				830CE08E171B6C3E00DDD525 /* Products */,
@@ -159,6 +167,7 @@
 				830CE089171B6C3E00DDD525 /* Sources */,
 				830CE08A171B6C3E00DDD525 /* Frameworks */,
 				830CE08B171B6C3E00DDD525 /* Resources */,
+				E79BE7C01CB173BB0021DA4E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -210,6 +219,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E79BE7C01CB173BB0021DA4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run db6262eed2838d5891a3743a7be726a0856300b8 fd8b1914c211d21748561900ec19ffe50f18afe0494cec345512db92fde63869";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		830CE089171B6C3E00DDD525 /* Sources */ = {
@@ -300,6 +325,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "btcbar/EthBar.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "btcbar/EthBar.temp_caseinsensitive_rename-Info.plist";
@@ -315,6 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "btcbar/EthBar.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "btcbar/EthBar.temp_caseinsensitive_rename-Info.plist";

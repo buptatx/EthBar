@@ -4,13 +4,18 @@
 //
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Answers/Answers.h>
 
 @implementation AppDelegate
-
 
 //
 // ENTRY & EXIT
 //
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [Fabric with:@[[Answers class]]];
+}
 
 // Status item initialization
 - (void)awakeFromNib
